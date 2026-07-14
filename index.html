@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>인생 리셋 시뮬레이터</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<section id="startScreen" class="screen active">
+
+<h1>인생 리셋 시뮬레이터</h1>
+
+<p class="intro">
+우리는 모두 같은 출발선에서 시작할까요?
+</p>
+
+<div class="notice">
+<h2>안내</h2>
+
+<p>
+본 게임은 모든 사회 현상을 반영하거나 대변하지 않습니다.<br>
+특정 직업이나 계층을 비하할 의도가 없습니다.<br><br>
+
+여러분은 하나의 인물이 되어 삶의 여러 선택을 경험하게 됩니다.<br>
+게임을 마친 후 자신의 선택을 다시 생각해 보세요.
+</p>
+
+</div>
+
+<button id="startBtn">게임 시작</button>
+
+</section>
+
+<section id="selectScreen" class="screen">
+
+<h2>당신의 성장 환경을 선택하세요.</h2>
+
+<div class="characterArea">
+
+<div class="characterCard" data-route="A">
+
+<h3>A</h3>
+<h4>고소득</h4>
+
+<p>
+안정된 환경에서 성장했습니다.<br>
+원하는 교육을 받을 수 있으며,<br>
+다양한 선택의 기회를 가집니다.
+</p>
+
+<button class="routeBtn">선택하기</button>
+
+</div>
+
+<div class="characterCard" data-route="B">
+
+<h3>B</h3>
+<h4>중소득</h4>
+
+<p>
+다양한 선택지가 있지만<br>
+가족과 현실을 함께 고려해야 합니다.
+</p>
+
+<button class="routeBtn">선택하기</button>
+
+</div>
+
+<div class="characterCard" data-route="C">
+
+<h3>C</h3>
+<h4>저소득</h4>
+
+<p>
+경제적인 제약 속에서 성장했습니다.<br>
+중요한 선택마다 현실을 고민해야 합니다.
+</p>
+
+<button class="routeBtn">선택하기</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="questionScreen" class="screen">
+
+<div class="progressBox">
+
+<span id="progressText">1 / 8</span>
+
+<div class="progressBar">
+<div id="progressFill"></div>
+</div>
+
+</div>
+
+<div class="questionBox">
+
+<h2 id="questionTitle"></h2>
+
+<p id="questionText"></p>
+
+<div id="choiceArea"></div>
+
+</div>
+
+</section>
+
+<section id="resultScreen" class="screen">
+
+<div class="resultBox">
+
+<h2 id="resultTitle">결과</h2>
+
+<div id="resultText"></div>
+
+<button id="nextBtn">다음</button>
+
+</div>
+
+</section>
+
+<section id="endingScreen" class="screen">
+
+<div class="endingBox">
+
+<h1 id="endingTitle"></h1>
+
+<div id="endingText"></div>
+
+<button id="restartBtn">
+다시 시작
+</button>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="questions.js" defer></script>
+<script src="results.js" defer></script>
+<script src="endings.js" defer></script>
+<script src="script.js" defer></script>
+
+</body>
+</html>

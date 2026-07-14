@@ -1,0 +1,472 @@
+/* =====================================
+    기본 설정
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"맑은 고딕",sans-serif;
+
+    background:#eef3f7;
+
+    color:#222;
+
+    min-height:100vh;
+
+}
+
+
+/* =====================================
+    전체 영역
+===================================== */
+
+.container{
+
+    width:90%;
+
+    max-width:950px;
+
+    margin:40px auto;
+
+}
+
+
+/* =====================================
+    화면 전환
+===================================== */
+
+.screen{
+
+    display:none;
+
+    animation:fade .4s ease;
+
+}
+
+.screen.active{
+
+    display:block;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =====================================
+    제목
+===================================== */
+
+h1{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+
+/* =====================================
+    시작화면
+===================================== */
+
+.intro{
+
+    text-align:center;
+
+    font-size:20px;
+
+    margin-bottom:30px;
+
+}
+
+.notice{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    line-height:1.9;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+
+    margin-bottom:35px;
+
+}
+
+
+/* =====================================
+    공통 버튼
+===================================== */
+
+button{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#startBtn,
+#nextBtn,
+#restartBtn{
+
+    display:block;
+
+    margin:auto;
+
+    padding:15px 45px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#3366cc;
+
+    color:white;
+
+}
+
+#startBtn:hover,
+#nextBtn:hover,
+#restartBtn:hover{
+
+    background:#224a96;
+
+}
+
+
+/* =====================================
+    인물 선택
+===================================== */
+
+.characterArea{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.characterCard{
+
+    width:260px;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.characterCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.characterCard h3{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+.characterCard h4{
+
+    margin-bottom:15px;
+
+}
+
+.characterCard p{
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.routeBtn{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#3366cc;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.routeBtn:hover{
+
+    background:#224a96;
+
+}
+
+
+/* =====================================
+    질문 화면
+===================================== */
+
+.progressBox{
+
+    margin-bottom:30px;
+
+}
+
+.progressBar{
+
+    width:100%;
+
+    height:10px;
+
+    background:#ddd;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+#progressFill{
+
+    width:0%;
+
+    height:100%;
+
+    background:#3366cc;
+
+    transition:.4s;
+
+}
+
+#progressText{
+
+    display:block;
+
+    text-align:right;
+
+    margin-bottom:8px;
+
+}
+
+.questionBox{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:35px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+#questionTitle{
+
+    margin-bottom:20px;
+
+}
+
+#questionText{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+
+/* =====================================
+    선택지
+===================================== */
+
+#choiceArea{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.choiceBtn{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#f2f2f2;
+
+    font-size:17px;
+
+    transition:.25s;
+
+}
+
+.choiceBtn:hover{
+
+    background:#3366cc;
+
+    color:white;
+
+}
+
+
+/* =====================================
+    결과 화면
+===================================== */
+
+.resultBox{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.resultBox h2{
+
+    margin-bottom:25px;
+
+}
+
+#resultText{
+
+    line-height:2;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+
+/* =====================================
+    엔딩
+===================================== */
+
+.endingBox{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:45px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+}
+
+#endingText{
+
+    line-height:2.1;
+
+    font-size:18px;
+
+    white-space:pre-line;
+
+    margin:30px 0;
+
+}
+
+
+/* =====================================
+    모바일
+===================================== */
+
+@media(max-width:768px){
+
+    .characterArea{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .characterCard{
+
+        width:100%;
+
+    }
+
+    h1{
+
+        font-size:36px;
+
+    }
+
+    #questionText{
+
+        font-size:16px;
+
+    }
+
+}
